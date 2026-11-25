@@ -1,7 +1,7 @@
 """Constants for Lazy Lovelace."""
 
 DOMAIN = "lazy_lovelace"
-VERSION = "0.1.0"  # keep in sync with manifest.json (it only busts the browser cache of the loader and the panel)
+VERSION = "0.1.1"  # keep in sync with manifest.json (it only busts the browser cache of the loader and the panel)
 STORAGE_KEY = DOMAIN
 STORAGE_VERSION = 1
 

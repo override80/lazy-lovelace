@@ -268,7 +268,7 @@ class LazyLovelacePanel extends HTMLElement {
         <span style="flex:1"></span><button id="reload">Refresh</button></div>`;
       body += `<div class="card" style="padding:6px 10px"><div class="row head"><div>Script</div><div>Size</div><div>Cards</div><div>Used in</div><div></div></div>`;
       shown.forEach((r, i) => {
-        const places = r.places && r.places.length ? r.places.slice(0, 4).map(esc).join('<br>') + (r.places.length > 4 ? `<br>+${r.places.length - 4} more` : '') : '<span class="muted">nowhere</span>';
+        const places = r.places && r.places.length ? r.places.slice(0, 4).map(esc).join('<br>') + (r.places.length > 4 ? `<br>+${r.places.length - 4} more` : '') : '<span class="muted">${r.tags.length ? 'nowhere' : '—'}</span>';
         const tags = r.tags.length ? r.tags.slice(0, 8).map(esc).join(', ') + (r.tags.length > 8 ? ` +${r.tags.length - 8}` : '') : '—';
         const loaded = r.lazy && window.lazyLovelace && window.lazyLovelace.loaded().includes(r.path) ? ' · loaded in this page' : '';
         const label = r.lazy ? 'Make eager' : ['keep', 'caution', 'advanced'].includes(r.hint) ? 'Make lazy…' : 'Make lazy';
