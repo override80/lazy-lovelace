@@ -1,0 +1,13 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Lazy Lovelace",
+        "description": "Adds a \"Lazy loading\" panel to the sidebar and loads the scripts you choose only when a dashboard card needs them."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Lazy Lovelace is already set up."
+    }
+  }
+}
